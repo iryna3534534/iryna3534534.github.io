@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stella Polar Incorporation OU — Hulgikaubandus (toidukaubad ja mittetarbekaubad)</title>
+  <meta name="description" content="Stella Polar Incorporation OU — usaldusväärne hulgikaubanduspartner toidukaupade ja mittetarbekaupade vallas. Pärnu, Eesti." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --emerald:#0c7f67;
+      --emerald-700:#096654;
+      --ivory:#f7f7f2;
+      --coal:#111315;
+      --ink:#1a1f22;
+      --muted:#6c7a73;
+      --card:#0e3530;
+      --ring:rgba(12,127,103,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--ivory);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.6}
+    a{color:var(--emerald);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(247,247,242,.9);backdrop-filter: blur(8px);border-bottom:1px solid #e6e6e0}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-family:Manrope,Inter,sans-serif;letter-spacing:.2px}
+    .brand-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--emerald),#15a287);display:grid;place-items:center;color:white;font-weight:800}
+    .nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0}
+    .nav a{padding:8px 12px;border-radius:10px;font-weight:600}
+    .nav a:hover{background:#e9f6f2}
+    .cta{background:var(--emerald);color:#fff;border:none;border-radius:12px;padding:10px 16px;font-weight:700}
+    .cta:hover{background:var(--emerald-700)}
+    /* Hero */
+    .hero{position:relative;overflow:hidden;background:
+      radial-gradient(1200px 600px at 80% -40%, rgba(12,127,103,.25), transparent 60%),
+      linear-gradient(180deg,#0b2420, #0c2c27 40%, #0e3530 100%)}
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:68px 0 52px}
+    .hero h1{color:#fff;font-size:44px;line-height:1.15;margin:0 0 14px;font-family:Manrope,Inter,sans-serif}
+    .hero p{color:#d8efe9;margin:0 0 24px}
+    .chiprow{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+    .chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#e9fffa;padding:8px 12px;border-radius:999px;font-weight:600;font-size:14px}
+    .hero-card{background:#0f3e37;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:14px}
+    .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .stat{background:#0c322d;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;color:#eafff7}
+    .stat b{display:block;font-size:22px;line-height:1.2}
+    .hero .buttons{display:flex;gap:12px;margin-top:6px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid transparent}
+    .btn-primary{background:#e9fff9;color:#0b3a32;border-color:#bfeee2}
+    .btn-outline{background:transparent;color:#eafff8;border-color:rgba(255,255,255,.35)}
+    .btn-outline:hover{background:rgba(255,255,255,.08)}
+    .hero img{border-radius:16px;aspect-ratio:16/10;object-fit:cover}
+    /* Section shells */
+    section{padding:64px 0}
+    h2{font-family:Manrope,Inter,sans-serif;font-size:32px;line-height:1.2;margin:0 0 14px}
+    .lead{color:#4a5a54;max-width:780px}
+    /* About */
+    .about{background:#fff}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    .about-card{background:#f0fbf7;border:1px solid #d6eee6;border-radius:16px;padding:18px}
+    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    .kpi .box{background:#fff;border:1px solid #e3eee9;border-radius:12px;padding:12px;text-align:center}
+    .kpi .box b{font-size:20px;display:block}
+    /* Services */
+    .services{background:linear-gradient(180deg,#fbfffd,#f6fbf8)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+    .card{background:#fff;border:1px solid #e6eee9;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+    .card img{aspect-ratio:4/3;object-fit:cover}
+    .card h3{margin:14px 14px 6px;font-size:18px}
+    .card p{margin:0 14px 16px;color:#5a6a64}
+    .card .meta{margin:0 14px 16px;font-size:13px;color:#788780}
+    /* Why choose us */
+    .why{background:#0f1a18;color:#e9fffa}
+    .why .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
+    .why .tile{background:#122521;border:1px solid #23443d;border-radius:16px;padding:16px}
+    .why .tile h4{margin:0 0 6px}
+    .why .tile p{margin:0;color:#cfe9e2}
+    /* Process */
+    .process{background:#fff}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px;counter-reset:step}
+    .step{position:relative;background:#fbfffd;border:1px dashed #cfe5de;border-radius:16px;padding:16px}
+    .step:before{counter-increment:step;content:counter(step);position:absolute;top:-12px;left:-12px;width:36px;height:36px;border-radius:50%;background:var(--emerald);color:#fff;display:grid;place-items:center;font-weight:800;box-shadow:0 6px 18px var(--ring)}
+    .step .arrow{position:absolute;right:-10px;top:50%;transform:translateY(-50%);width:20px;height:2px;background:#a7cfc4}
+    .step:last-child .arrow{display:none}
+    /* Contact form */
+    .contact{background:linear-gradient(180deg,#0f3e37,#0c2f2a 70%, #0a2622);color:#eafff8}
+    .contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start}
+    .form{background:#0f463e;border:1px solid #1e5f55;border-radius:16px;padding:18px}
+    label{display:block;font-weight:600;margin:10px 0 6px}
+    input,textarea,select{width:100%;border:1px solid #2a6d63;background:#0d3a34;color:#eafff8;border-radius:10px;padding:12px}
+    textarea{min-height:120px;resize:vertical}
+    .form .btn{background:#e9fff9;color:#0b3a32;border-color:#bfeee2}
+    .note{font-size:13px;color:#cfe9e2;margin-top:8px}
+    .toast{position:fixed;right:16px;bottom:16px;background:#fff;color:#0f2723;border:1px solid #bfeee2;border-left:6px solid var(--emerald);border-radius:12px;padding:12px 14px;box-shadow:0 8px 28px rgba(0,0,0,.25);display:none;z-index:60}
+    /* Contacts */
+    .contacts{background:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px}
+    .block{background:#f6fbf8;border:1px solid #d6eee6;border-radius:16px;padding:18px}
+    /* Footer */
+    footer{background:#0b1412;color:#cfe9e2;padding:18px 0;border-top:1px solid #18332d}
+    footer .container{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .mini{font-size:13px;color:#9ec6bb}
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-inner,.about-grid,.contact .wrap{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr 1fr}
+      .why .grid,.steps{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .nav ul{display:none}
+      .hero h1{font-size:34px}
+      .cards{grid-template-columns:1fr}
+      .why .grid,.steps{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge">SP</div>
+        <div>Stella Polar Incorporation OU</div>
+      </div>
+      <ul>
+        <li><a href="#hero">Avaleht</a></li>
+        <li><a href="#about">Meist</a></li>
+        <li><a href="#services">Teenused</a></li>
+        <li><a href="#why">Miks valida meid</a></li>
+        <li><a href="#process">Protsess</a></li>
+      </ul>
+      <a class="cta" href="#contact">Küsi pakkumist</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>Usaldusväärne hulgipartner<br/>toidukaupade ja mittetarbekaupade vallas</h1>
+        <p>Varustame jaekette ja B2B-kliente stabiilse valiku ning täpse logistika kaudu.
+           Fookuses on kvaliteet, tarnekindlus ja läbipaistev koostöö.</p>
+        <div class="chiprow">
+          <span class="chip">300+ tooteartiklit</span>
+          <span class="chip">Lepingud sertifitseeritud tarnijatega</span>
+          <span class="chip">EU kvaliteedistandardid</span>
+        </div>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#services">Vaata teenuseid</a>
+          <a class="btn btn-outline" href="#contact">Võta ühendust</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?q=80&w=1600&auto=format&fit=crop" alt="Ladu ja logistika — illustratsioon"/>
+        <div class="hero-stats">
+          <div class="stat"><b>3+ aastat</b>turukogemust</div>
+          <div class="stat"><b>24–72 h</b>tarne Baltikumis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div>
+        <h2>Meist</h2>
+        <p class="lead">Stella Polar Incorporation OU tegeleb toiduainete ja mittetarbekaupade hulgimüügiga,
+          koondades usaldusväärsed tootjad ja jaotuskanalid. Meie tugevus on läbimõeldud sortiment,
+          konkurentsivõimeline hinnastamine ja paindlik tarneahel.</p>
+        <ul>
+          <li>Lepingulised tarnijad ja regulaarne kvaliteedikontroll</li>
+          <li>Koostöö jaekettide, HoReCa ja tootmisettevõtetega</li>
+          <li>Selged tingimused, arusaadav dokumentatsioon ja EDI-valmidus</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1600&auto=format&fit=crop" alt="Kaubad ja jaotus"/>
+        <div class="kpi">
+          <div class="box"><b>5000 m²</b><span>Ladupinda partnerite võrgus</span></div>
+          <div class="box"><b>97%</b><span>Õigeaegsed tarned</span></div>
+          <div class="box"><b>EU</b><span>Standarditele vastavus</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Teenused</h2>
+      <p class="lead">Pakume terviklikku hulgilahendust alates sortimendi planeerimisest kuni kohaletoimetamiseni.</p>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1505577058444-a3dab90d4253?q=80&w=1600&auto=format&fit=crop" alt="Toidukaubad hulgi"/>
+          <h3>Toidukaubad hulgi</h3>
+          <p>Püsiv valik põhi- ja nišitooteid vastavalt poeketi vajadustele.</p>
+          <div class="meta">SKU haldus • Kampaanialogistika</div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1461280360983-bd93eaa5051b?q=80&w=1600&auto=format&fit=crop" alt="Mittetarbekaupade hulgikaubandus"/>
+          <h3>Mittetarbekaupade hulgikaubandus</h3>
+          <p>Hooldus- ja majapidamiskaubad, pakendid, hügieen — ühtsest kanalist.</p>
+          <div class="meta">Sertifikaadid • Vastavus nõuetele</div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1600&auto=format&fit=crop" alt="Tarneahela lahendused"/>
+          <h3>Tarneahela lahendused</h3>
+          <p>Prognoosid, EDI, täis- ja jaotussaadetised, kiire ümberpakkimine.</p>
+          <div class="meta">24–72 h tarne • Jälgitavus</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section id="why" class="why">
+    <div class="container">
+      <h2>Miks valida meid</h2>
+      <p class="lead" style="color:#cfe9e2">Koostöö, mis hoiab riiulid täidetuna ja kulud kontrolli all.</p>
+      <div class="grid">
+        <div class="tile">
+          <h4>Tarnekindlus</h4>
+          <p>Planeeritud graafikud ja varupuhvrid minimeerivad katkestusi.</p>
+        </div>
+        <div class="tile">
+          <h4>Läbipaistev hinnastamine</h4>
+          <p>Selged marginaalid ja kampaaniate tugi müügile.</p>
+        </div>
+        <div class="tile">
+          <h4>Kvaliteedikontroll</h4>
+          <p>Dokumenteeritud protseduurid ja partnerite auditid.</p>
+        </div>
+        <div class="tile">
+          <h4>Paindlikkus</h4>
+          <p>Kohandatud sortiment, hooajalisus ja erilahendused.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="process">
+    <div class="container">
+      <h2>Meie protsess</h2>
+      <p class="lead">Lihtne ja arusaadav koostöövoog – samm-sammult, nooltel liikudes.</p>
+      <div class="steps">
+        <div class="step">
+          <b>Päring & vajaduse kaardistus</b>
+          <p>Valdkond, mahud, SLA ja sihtturud.</p>
+          <div class="arrow"></div>
+        </div>
+        <div class="step">
+          <b>Pakkumine & sortiment</b>
+          <p>Hinnastamine, tarnegraafik, EDI/andmevormingud.</p>
+          <div class="arrow"></div>
+        </div>
+        <div class="step">
+          <b>Leping & käivitamine</b>
+          <p>Tellimusrutiinid, testisaadetised, KPI-d.</p>
+          <div class="arrow"></div>
+        </div>
+        <div class="step">
+          <b>Pidev täitmine</b>
+          <p>Prognoosid, järelaruanne, täiendus- ja kampaaniakogused.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact form -->
+  <section id="contact" class="contact">
+    <div class="container wrap">
+      <div>
+        <h2>Võtke meiega ühendust</h2>
+        <p class="lead" style="color:#cfe9e2">Kirjeldage lühidalt oma vajadust – vastame tavaliselt ühe tööpäeva jooksul.</p>
+        <div class="form">
+          <form id="contactForm">
+            <label for="name">Teie nimi</label>
+            <input id="name" name="name" placeholder="Nt. Annika" required>
+            <label for="company">Ettevõte</label>
+            <input id="company" name="company" placeholder="Nt. Baltic Retail OÜ">
+            <label for="email">E-post</label>
+            <input id="email" name="email" type="email" placeholder="nimi@ettevote.ee" required>
+            <label for="need">Huvipakkuv teenus</label>
+            <select id="need" name="need">
+              <option>Toidukaubad hulgi</option>
+              <option>Mittetarbekaupade hulgikaubandus</option>
+              <option>Tarneahela lahendused</option>
+              <option>Muu / küsi nõu</option>
+            </select>
+            <label for="msg">Sõnum</label>
+            <textarea id="msg" name="msg" placeholder="Mahud, sihtkohad, soovitud alguskuupäev..."></textarea>
+            <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
+              <button class="btn" type="submit">Saada päring</button>
+              <span class="note">Saates nõustute, et töötleme andmeid päringu lahendamiseks.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+     
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2>Kontaktid</h2>
+      <div class="contact-grid">
+        <div class="block">
+          <b>Aadress</b>
+          <p>Vanapargi tn 2, 80013 Pärnu, Estonia</p>
+        </div>
+        <div class="block">
+          <b>E-post</b>
+          <p><a href="mailto:iryna@stellapolarincorporation.org">iryna@stellapolarincorporation.org</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="brand" style="gap:8px">
+        <div class="brand-badge" style="width:28px;height:28px">SP</div>
+        <strong>Stella Polar Incorporation OU</strong>
+      </div>
+      <div class="mini">© 2025 Stella Polar Incorporation OU. Kõik õigused kaitstud.</div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast">Sõnum saadetud — võtame peagi ühendust!</div>
+
+  <script>
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
+      });
+    });
+    // Form handler (frontend only)
+    const form=document.getElementById('contactForm');
+    const toast=document.getElementById('toast');
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      // here you could POST to your backend; we just show a success toast
+      toast.style.display='block';
+      setTimeout(()=>toast.style.display='none', 4200);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
